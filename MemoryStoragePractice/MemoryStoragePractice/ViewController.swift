@@ -13,9 +13,7 @@ final class ViewController: UIViewController {
     
     
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     // MARK: - Lifecycle
@@ -23,11 +21,38 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        getUsers()
+        
+        
     }
 
     // MARK: - IBActions
     
     @IBAction func createButtonAction(_ sender: UIButton) {
+        let userData = UserData(name: nameTextField.text,
+                                email: emailTextField.text,
+                                password: passwordTextField.text)
+        MemoryManager.shared.storage.append(userData)
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(MemoryManager.shared.storage) {
+            MemoryManager.memoryStorage.set(encoded, forKey: "Memory")
+        }
+        
+        
+        // MemoryManager.memoryStorage.set(MemoryManager.shared.storage, forKey: "storage")
+        print(MemoryManager.shared.storage.count)
+    }
+    
+    // MARK: - Private Methods
+    
+    func getUsers() {
+        if let savedData = MemoryManager.memoryStorage.object(forKey: "Memory") as? Data {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([UserData].self, from: savedData) {
+                MemoryManager.shared.storage = decoded
+            }
+        }
     }
     
 
