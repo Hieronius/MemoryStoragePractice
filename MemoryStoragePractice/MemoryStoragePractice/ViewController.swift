@@ -55,6 +55,15 @@ final class ViewController: UIViewController {
         }
     }
     
+    func deleteUsers() {
+        if let savedData = MemoryManager.memoryStorage.object(forKey: "Memory") as? Data {
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([UserData].self, from: savedData) {
+                MemoryManager.shared.storage = decoded.dropLast()
+            }
+        }
+    }
+    
 
 }
 
