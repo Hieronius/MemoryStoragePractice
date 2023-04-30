@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD863B0329FED6A700A59AE2 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD863B0229FED6A700A59AE2 /* UserTableViewCell.swift */; };
 		DD89075A29FD8FB1001EAFBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89075929FD8FB1001EAFBE /* AppDelegate.swift */; };
 		DD89075C29FD8FB1001EAFBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89075B29FD8FB1001EAFBE /* SceneDelegate.swift */; };
 		DD89075E29FD8FB1001EAFBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD89075D29FD8FB1001EAFBE /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD863B0229FED6A700A59AE2 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		DD89075629FD8FB1001EAFBE /* MemoryStoragePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemoryStoragePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD89075929FD8FB1001EAFBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DD89075B29FD8FB1001EAFBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				DD89077129FD9267001EAFBE /* UserData.swift */,
 				DD89075F29FD8FB1001EAFBE /* Main.storyboard */,
 				DD89076D29FD916A001EAFBE /* TableViewController.swift */,
+				DD863B0229FED6A700A59AE2 /* UserTableViewCell.swift */,
 				DD89076229FD8FB6001EAFBE /* Assets.xcassets */,
 				DD89076429FD8FB6001EAFBE /* LaunchScreen.storyboard */,
 				DD89076729FD8FB6001EAFBE /* Info.plist */,
@@ -152,6 +155,7 @@
 				DD89077029FD9252001EAFBE /* MemoryManager.swift in Sources */,
 				DD89075A29FD8FB1001EAFBE /* AppDelegate.swift in Sources */,
 				DD89075C29FD8FB1001EAFBE /* SceneDelegate.swift in Sources */,
+				DD863B0329FED6A700A59AE2 /* UserTableViewCell.swift in Sources */,
 				DD89076E29FD916A001EAFBE /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
