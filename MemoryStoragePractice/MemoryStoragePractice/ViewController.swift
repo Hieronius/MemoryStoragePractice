@@ -44,6 +44,12 @@ final class ViewController: UIViewController {
         print(MemoryManager.shared.storage.count)
     }
     
+    
+    @IBAction func deleteButtonAction(_ sender: UIButton) {
+        deleteUsers()
+        print(MemoryManager.shared.storage.count)
+    }
+    
     // MARK: - Private Methods
     
     func getUsers() {
@@ -56,12 +62,23 @@ final class ViewController: UIViewController {
     }
     
     func deleteUsers() {
+        // get data from UserDefaults
         if let savedData = MemoryManager.memoryStorage.object(forKey: "Memory") as? Data {
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([UserData].self, from: savedData) {
-                MemoryManager.shared.storage = decoded.dropLast()
+                let array = decoded
+                MemoryManager.shared.storage = array.dropLast()
+                
+                // remove edited data to the UserDefault
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(MemoryManager.shared.storage) {
+                    MemoryManager.memoryStorage.set(encoded, forKey: "Memory")
+                }
             }
+        
         }
+        
+        
     }
     
 

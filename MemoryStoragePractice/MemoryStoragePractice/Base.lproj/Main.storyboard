@@ -45,6 +45,14 @@
                                     <action selector="createButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hnq-DF-gNs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="azF-bp-5nO">
+                                <rect key="frame" x="120" y="391" width="135" height="34.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Удалить"/>
+                                <connections>
+                                    <action selector="deleteButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8o2-bi-ZMJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,9 +60,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YAn-3d-jMv" secondAttribute="trailing" constant="120" id="5YA-o5-WxZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xkq-v2-VcI" secondAttribute="trailing" constant="15" id="6n5-ud-eKt"/>
                             <constraint firstItem="Xkq-v2-VcI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="AL5-3i-xgt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="azF-bp-5nO" secondAttribute="trailing" constant="120" id="BT3-DL-pdV"/>
                             <constraint firstItem="YAn-3d-jMv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="LuJ-aC-14q"/>
                             <constraint firstItem="Xkq-v2-VcI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Oie-PA-6LZ"/>
                             <constraint firstItem="YAn-3d-jMv" firstAttribute="top" secondItem="Xkq-v2-VcI" secondAttribute="bottom" constant="42" id="ene-8f-ozc"/>
+                            <constraint firstItem="azF-bp-5nO" firstAttribute="top" secondItem="YAn-3d-jMv" secondAttribute="bottom" constant="40.5" id="pV3-ed-UNQ"/>
+                            <constraint firstItem="azF-bp-5nO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="uFG-ln-Qdv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="icx-Lb-VgD">
