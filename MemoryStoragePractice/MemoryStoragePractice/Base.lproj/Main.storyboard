@@ -106,6 +106,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellDetail" destination="Cl7-Yi-uEg" id="9ej-L2-dff"/>
+                                    <outlet property="cellTitle" destination="1Np-1k-ZFB" id="SBz-sX-Y64"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

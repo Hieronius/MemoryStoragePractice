@@ -22,12 +22,15 @@ final class TableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        MemoryManager.shared.storage.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! UserTableViewCell
+        cell.cellTitle.text = MemoryManager.shared.storage[indexPath.row].name
+        cell.cellDetail.text = MemoryManager.shared.storage[indexPath.row].email
         
+        return cell
     }
     
 }
